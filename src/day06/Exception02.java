@@ -7,17 +7,21 @@ public class Exception02 {
 		// 1 2 +   1 2 -   1 2 *   1 0 /   1 0 %
 		
 		Exception02 ex02 = new Exception02();
-		try {
-			//예외가 발생할 수 있는 구문 작성
-	        System.out.println("1 + 2 = " + ex02.Calc(1, 2, '+'));
-	        System.out.println("1 - 2 = " + ex02.Calc(1, 2, '-'));
-	        System.out.println("1 * 2 = " + ex02.Calc(1, 2, '*'));
-	        System.out.println("1 / 0 = " + ex02.Calc(1, 0, '/')); // 예외 처리 확인
-//	        System.out.println("1 % 0 = " + ex02.Calc(1, 0, '%')); // 예외 처리 확인			
-		} catch(Exception e) {
-			e.printStackTrace();
-			System.out.println(e.getMessage());
-		}
+		System.out.println(ex02.calc(1, 2, '-'));
+		System.out.println(ex02.calc(1, 0, '/'));
+		
+//		try {
+//			//예외가 발생할 수 있는 구문 작성
+//			System.out.println(ex02.calc(1, 2, '+'));
+//			System.out.println(ex02.calc(1, 2, '-'));
+//			System.out.println(ex02.calc(1, 2, '*'));
+//			System.out.println(ex02.calc(1, 0, '/'));
+//		} catch (Exception e) {
+//			// 예외 처리 작성
+//			e.printStackTrace();
+//			System.out.println(e.getMessage());
+//		}
+			
 	}
 	// 두수를 입력받고, 연산자를 입력받아 4칙연산의 결과를 리턴하는 메서드
 	// 매개변수 : int num1, int num2, char op
@@ -27,7 +31,7 @@ public class Exception02 {
 	// 반드시 적어줘야 함.
 	// throw는 예외적으로 RuntimeException만 생략가능
 	// throw : 예외 떠넘기기
-	public double Calc(int num1, int num2, char op) throws RuntimeException {
+	public double calc(int num1, int num2, char op) throws RuntimeException {
 		double result = 0;  //초기화
 
 		
