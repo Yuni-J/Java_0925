@@ -24,7 +24,7 @@ public class Order extends Menu {
 	@Override
 	public String toString() {
 		return 
-		 "주문번호:" + orderNum +super.toString()+", 수량:" + amount + ", 금액:" + payment + "]";
+		 "주문번호:" + orderNum +", "+super.toString()+", 수량:" + amount + ", 금액:" + payment;
 	}
 	
 	public int getOrderNum() {

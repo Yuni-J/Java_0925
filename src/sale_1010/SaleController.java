@@ -114,6 +114,16 @@ public class SaleController {
 	
 	public void totalSale() {
 		// 7.전체 판매 내역
+		System.out.println("--전체 판매 내역--");
+		
+		int total = 0;
+		for(Order temp : order) {
+			System.out.println("제품명:"+temp.getProdectName()+", 수량:"+temp.getAmount()+", 가격:"+temp.getPrice());
+		total += temp.getPayment();
+		}
+
+		System.out.println("---------------");
+	    System.out.println("총 판매 금액: " + total);
 		
 	}
 
