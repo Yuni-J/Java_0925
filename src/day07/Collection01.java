@@ -136,7 +136,7 @@ public class Collection01 {
 			System.out.println(temp);
 		}
 		
-		// - remove(index) : index번지의 값으 삭제 => List에서만 가능
+		// - remove(index) : index번지의 값을 삭제 => List에서만 가능
 		// - remove(object) : object 요소를 삭제 => set/map에서 가능
 		strList.remove(0);
 		System.out.println(strList);
