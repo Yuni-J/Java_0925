@@ -15,8 +15,9 @@ public class ListEx03 {
 		String num = "45,78,98,65,84,52,64,31";
 		String[] numArr = num.split(",");
 		
-		// num의 값을 숫자 List를 생성하여 추가 => 출력
+		// 문자를 숫자로 변환 후 리스트에 넣기
 		List<String> score = new ArrayList<String>();
+		
 		for(String n : numArr) {
 			score.add(n);
 		}

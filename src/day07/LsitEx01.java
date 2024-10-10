@@ -70,7 +70,6 @@ public class LsitEx01 {
 		ex.add("밥먹기");
 		todayList.removeAll(ex);
 		System.out.println(todayList);
-		
 
 	}
 

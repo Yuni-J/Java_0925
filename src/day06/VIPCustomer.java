@@ -7,8 +7,8 @@ public class VIPCustomer extends Customer {
 	public VIPCustomer() {}
 	public VIPCustomer(int id, String name, int agentid) {
 		super(id, name);
-		customerGrade = "Gold";
-		bonusRatio = 0.02;
+		customerGrade = "VIP";
+		bonusRatio = 0.05;
 		saleRatio = 0.1;
 		agentID = agentid;
 	}
