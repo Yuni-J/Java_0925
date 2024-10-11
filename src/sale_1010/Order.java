@@ -16,7 +16,7 @@ public class Order extends Menu {
 		this.payment = price * amount;
 	}
 	public Order(int orderNum, String name, int amount) {
-		super.setProdectName(name);
+		super.setproductName(name);
 		this.orderNum = orderNum;
 		this.amount = amount;
 	}

@@ -5,19 +5,19 @@ package sale_1010;
 public class Menu {
 	
 	private String productID;
-	private String prodectName;
+	private String productName;
 	private int price;
 	
 	public Menu() {}
-	public Menu(String productID, String prodectName, int price) {
+	public Menu(String productID, String productName, int price) {
 		this.productID = productID;
-		this.prodectName = prodectName;
+		this.productName = productName;
 		this.price = price;
 	}
 	
 	@Override
 	public String toString() {
-		return "상품번호="+productID+", 상품명="+prodectName+", 가격="+price;
+		return "상품번호:"+productID+", 상품명:"+productName+", 가격:"+price;
 	}
 	
 	public String getProductID() {
@@ -26,11 +26,11 @@ public class Menu {
 	public void setProductID(String productID) {
 		this.productID = productID;
 	}
-	public String getProdectName() {
-		return prodectName;
+	public String getproductName() {
+		return productName;
 	}
-	public void setProdectName(String prodectName) {
-		this.prodectName = prodectName;
+	public void setproductName(String productName) {
+		this.productName = productName;
 	}
 	public int getPrice() {
 		return price;

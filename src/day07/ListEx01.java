@@ -6,7 +6,7 @@ import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
 
-public class LsitEx01 {
+public class ListEx01 {
 
 	public static void main(String[] args) {
 		/* 하루 일과를 저장하는 list를 생성
