@@ -14,6 +14,7 @@ public class SaleMain {
 		
 		Scanner scan = new Scanner(System.in);
 		SaleController sc = new SaleController();
+		sc.originMenu();
 		int menu = 0;
 		
 		do {
@@ -28,7 +29,7 @@ public class SaleMain {
 			case 3: sc.modifyMenu(scan); break;
 			case 4: sc.totalMenuView(); break;
 			case 5: sc.menuOrder(scan); break;
-			case 6: sc.receiptPrint(); break;
+			case 6: sc.receiptPrint(scan); break;
 			case 7: sc.totalSale(); break;
 			case 8: System.out.println("종료!"); break;
 			default: System.out.println("메뉴에 없는 선택지입니다.");
