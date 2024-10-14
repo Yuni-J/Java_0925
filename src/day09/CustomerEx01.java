@@ -1,6 +1,6 @@
 package day09;
 
-public class CustomerEx01 {
+public class CustomerEx01 implements Comparable<CustomerEx01> {
 
 	private String name;
 	private int age;
@@ -10,11 +10,12 @@ public class CustomerEx01 {
 	public CustomerEx01(String name, int age) {
 		this.name = name;
 		this.age = age;
+		this.cost = age >=15 ? 100 : 50;
 	}
 	
 	@Override
 	public String toString() {
-		return "이름:" + name + " 나이:" + age;
+		return name + "(" + age + ") 비용:"+cost+"만원";
 	}
 	
 	public String getName() {
@@ -30,13 +31,14 @@ public class CustomerEx01 {
 		this.age = age;
 	}
 	public int getCost() {
-		if(age >=15) {
-			return 100;
-		} else {
-			return 50;
-		}
+		return cost;
 	}
 	public void setCost(int cost) {
 		this.cost = cost;
+	}
+	@Override
+	public int compareTo(CustomerEx01 o) {
+		// this 와 o 객체를 정렬
+		return this.name.compareTo(o.name);
 	}
 }
