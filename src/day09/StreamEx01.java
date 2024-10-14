@@ -1,6 +1,7 @@
 package day09;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 
 public class StreamEx01 {
@@ -53,6 +54,57 @@ public class StreamEx01 {
 			}
 		})
 		.forEach(System.out::println);
+		
+		//익명클래스 사용할 경우 Comparator 대상값이 (매개변수) 2개
+		//클래스 내부에서 구현할 경우 Comparable 대상값이 (매개변수) 1개
+		
+		int sum = 0;
+		System.out.println("--고객명단--");
+		for(CustomerEx01 tmp : list){
+			String name = tmp.getName();
+			int age= tmp.getAge();
+			int price = tmp.getCost();
+			sum += price;
+			System.out.println(name+"("+age+")"+" 비용:"+price+"만원");
+		}
+		System.out.println("-------------");
+		System.out.println("총지불비용:"+sum+"만원");
+		//Comparator 구현이 없는 경우
+		list.sort(new Comparator<CustomerEx01>() {
+
+			@Override
+			public int compare(CustomerEx01 o1, CustomerEx01 o2) {
+				// TODO Auto-generated method stub
+				return o1.getName().compareTo(o2.getName());
+			}
+		});
+		
+		Collections.sort(list); // 클래스에 정렬이 구현되어 있을경우 사용가능
+		System.out.println("--20대 이상 명단--");
+		for(CustomerEx01 tmp : list) {
+			if(tmp.getAge() >= 20) {
+				System.out.println(tmp);
+			}
+		}
+		
+		System.out.println("----Stream 이용방법----");
+		
+		list.stream().forEach(s->System.out.println(s));
+		
+		int total = list.stream()
+				.mapToInt(n-> n.getCost())
+				.sum();
+		System.out.println("---총지불금액:"+total);
+		
+		//20세이상
+		System.out.println("--20세 이상--");
+		list.stream()
+		.filter(s->s.getAge()>=20)
+		.sorted()// 기존 클래스에서 구현
+		.forEach(a->System.out.println(a));
+		
+		//익명클래스 사용할 경우 Comparator 대상값이 (매개변수가) 2개
+		//클래스 내부에서 구현할 경우 Comparable 대상값이 (매개변수) 1개
 		
 	}
 
