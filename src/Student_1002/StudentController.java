@@ -60,11 +60,11 @@ public class StudentController implements Program {
 		// 학생검색(학생정보, 수강정보) : 학번기준
 		// 학번을 입력받아 배열에서 탐색 후 학생정보 + 수강정보 출력
 		// 없으면 없다고 출력
-		System.out.println("학생 학번 정보 확인! 학생 학번 입력>");
+		System.out.println("학생 학번 정보 확인! 학번 입력>");
 		String searchNum = scan.next();
+		
 		for(int i=0; i<cnt; i++) {
-//			if(searchNum.equals(students[i].getNum())) { //아래와 동일
-			if(students[i].getName().equals(searchNum)) {
+			if(searchNum.equals(students[i].getNum())) { 
 				students[i].stdPrint();
 				students[i].subPrint();
 				return i;
@@ -125,7 +125,7 @@ public class StudentController implements Program {
 		int copyCnt = students.length - index - 1 ;
 		System.arraycopy(students, index+1, students, index, copyCnt);
 		
-		students[cnt-1] = null;
+		students[students.length-1] = null;
 		cnt--;
 		
 		System.out.println();
@@ -181,7 +181,6 @@ public class StudentController implements Program {
 			String searchCourse = scan.next();
 			students[index].removeSubject(searchCourse);	
 			System.out.println(searchCourse +"과목 수강철회 완료!");
-			
 		}
 		System.out.println();
 	}
