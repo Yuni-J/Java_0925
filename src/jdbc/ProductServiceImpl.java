@@ -21,9 +21,26 @@ public class ProductServiceImpl implements Service {
 
 	@Override
 	public List<Product> getList() {
-		// TODO Auto-generated method stub
 		System.out.println("list serviceImpl success!!");
 		return dao.selectList();
+	}
+
+	@Override
+	public Product getProduct(int pno) {
+		System.out.println("product serviceImpl success!!");
+		return dao.selectProduct(pno);
+	}
+
+	@Override
+	public int update(Product p) {
+		System.out.println("update serviceImpl success!!");
+		return dao.update(p);
+	}
+
+	@Override
+	public int delete(int pno) {
+		System.out.println("delete serviceImpl success!!");
+		return dao.delete(pno);
 	}
 
 }

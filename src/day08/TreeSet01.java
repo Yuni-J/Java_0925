@@ -25,6 +25,7 @@ public class TreeSet01 {
 		System.out.println(set2);
 		
 		// first() / last() : TreeSet의 가장 앞에 있는 값 / 가장 뒤에 있는 값 추출
+		System.out.println("--TreeSet first/last--");
 		System.out.println(set.first());
 //		System.out.println(set2.first());  //error 없음.
 		System.out.println(set.last());
