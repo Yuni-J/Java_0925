@@ -31,11 +31,11 @@ public class Product {
 		this.madeby = madeby;
 	}
 	//상품수정 -> pname, price, madeby, pno
-	public Product(int pno, String pname, int price, String madeby) {
+	public Product(String pname, int price, String madeby, int pno) {
 		this(pname, price, madeby);
 		this.pno = pno;
-
 	}
+	
 	@Override
 	public String toString() {
 		return pno + ". 상품명:" + pname + "(" + price +") / " + regdate + " ["+ madeby + "]";
