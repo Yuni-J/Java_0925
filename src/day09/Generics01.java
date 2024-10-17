@@ -16,18 +16,18 @@ public class Generics01 {
 		 * */ 
 		
 		//객체 구현시 타입을 적어서 처리 (안써도 가능) 
-		List<Sale<Integer, String>> list = new ArrayList<>();
+		List<SaleGen01<Integer, String>> list = new ArrayList<>();
 		int id = 1;
 		String name = "햄버거";
 		int price = 5000;
 		
-		Sale<Integer, String> s = new Sale<Integer, String>(id,name,price);
+		SaleGen01<Integer, String> s = new SaleGen01<Integer, String>(id,name,price);
 //		Sale s = new Sale(id,name,price); (생략가능)
 		list.add(s);
-		list.add(new Sale(2, "콜라", 1500));
+		list.add(new SaleGen01(2, "콜라", 1500));
 		int sum = 0;
 		int idSum = 0;
-		for(Sale t : list) {
+		for(SaleGen01 t : list) {
 			sum += t.getPrice();
 			idSum += (int)t.getId();
 			System.out.println(t);			
