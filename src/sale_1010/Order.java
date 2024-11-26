@@ -16,7 +16,7 @@ public class Order extends Menu {
 		this.payment = price * amount;
 	}
 	public Order(int orderNum, String name, int amount) {
-		super.setProdectName(name);
+		super.setproductName(name);
 		this.orderNum = orderNum;
 		this.amount = amount;
 	}
@@ -24,7 +24,7 @@ public class Order extends Menu {
 	@Override
 	public String toString() {
 		return 
-		 "주문번호:" + orderNum +super.toString()+", 수량:" + amount + ", 금액:" + payment + "]";
+		 "주문번호:" + orderNum +", "+super.toString()+", 수량:" + amount + ", 금액:" + payment;
 	}
 	
 	public int getOrderNum() {
